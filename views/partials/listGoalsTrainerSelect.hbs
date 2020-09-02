@@ -1,0 +1,46 @@
+{{#each member.goals}}
+<table class="ui celled table ">
+
+    <thead>
+    <tr>
+        <th>Measurement</th>
+        <th>Target</th>
+        <th>Comments</th>
+        <th></th>
+    </tr>
+    </thead>
+
+    <tbody>
+      
+       <tr>
+          <td>
+              {{measurements}}
+          </td>
+          <td>
+              {{target}}
+          </td>
+          <td>
+              {{comments}}
+          </td>
+          <td>
+            <a href="/dashboardTrainerMember/deletGoals/{{id}}" class="ui icon button">
+              <i class="icon trash"></i>
+            </a>
+          </td>
+      
+    </tbody>
+  
+
+</table>
+<form action="/listGoalsTrainerSelect/updateComment/{{id}}" class="ui form" method="POST">
+
+
+    <div class="field">
+        <label>Comment</label>
+        <input name="comments" placeholder="Comment" type="text">
+    </div>
+
+
+    <button class="ui blue submit button">Update Comment</button>
+</form>
+{{/each}}

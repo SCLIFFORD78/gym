@@ -1,0 +1,58 @@
+<table class="ui table">
+  <thead>
+    <tr>
+        <th>Date</th>
+        <th>Weight</th>
+        <th>Chest</th>
+        <th>Thigh</th>
+        <th>Upper Arm</th>
+        <th>Waist</th>
+        <th>Hips</th>
+        <th>Trend Weight</th>
+        <th>Comments</th>
+        <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    {{#each assessments}}
+      <tr>
+        <td>
+            {{time}}
+        </td>
+        <td>
+            {{weight}}
+        </td>
+        <td>
+            {{chest}}
+        </td>
+        <td>
+            {{thigh}}
+        </td>
+        <td>
+            {{upperArm}}
+        </td>
+        <td>
+            {{waite}}
+        </td>
+        <td>
+            {{hips}}
+        </td>
+        <td>
+            {{#if trend}}
+            <a class="ui teal tag label"></a>
+            {{else}}
+            <a class="ui red tag label"></a>
+            {{/if}}
+        </td>
+        <td>
+            {{comments}}
+        </td>
+        <td>
+            <a href="/assessment/deletAssessment/{{id}}" class="ui icon button">
+              <i class="icon trash"></i>
+          </a>
+        </td>
+      </tr>
+    {{/each}}
+  </tbody>
+</table>

@@ -1,0 +1,24 @@
+{{> menu id="dashboardTrainer"}}
+
+{{#each members}}
+<section class="ui segment">
+  <div class="ui relaxed divided list">
+    <div class="item">
+      <i class="big user icon"></i>
+      <div class="content">
+        <a class="memberNameLink" data-position="top left" data-tooltip="View Assessments"
+           href="/dashboardTrainerMember/{{id}}"> {{name}}
+        </a>
+        <a class="ui right floated " data-position="top right" data-tooltip="Delete Member"
+           href="/dashboardTrainer/{{id}}/deleteMember">
+
+          <i class="big red trash alternate icon"></i>
+
+        </a>
+        <div class="description">{{assNum}} Assessments</div>
+        <div class="description">{{goalsNum}} Goals</div>
+      </div>
+    </div>
+  </div>
+</section>
+{{/each}}

@@ -1,0 +1,28 @@
+{
+  "users": [
+    {
+      "name": "james",
+      "gender": "Male",
+      "email": "james@wit.ie",
+      "password": "Ranger01?",
+      "address": "Killorglin",
+      "height": "1.8",
+      "startWeight": "100",
+      "accountType": "Trainer",
+      "id": "85f978d0-d6e7-11ea-ac07-01469c23bc2c",
+      "assNum": 0
+    },
+    {
+      "name": "homer Simpson",
+      "gender": "Male",
+      "email": "homer@simpson.com",
+      "password": "secret",
+      "address": "Killarney, Co. Kerry , Ireland",
+      "height": "1.8",
+      "startWeight": "100",
+      "accountType": "Member",
+      "goals": [],
+      "id": "8427fdc0-ebdb-11ea-b32b-f7840e795a53"
+    }
+  ]
+}

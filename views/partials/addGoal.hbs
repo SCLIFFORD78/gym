@@ -1,0 +1,80 @@
+<form class="ui stacked segment form" action="/goals/{{user.id}}/addGoal" method="POST">
+  <div class="two fields">
+    <div class="field">
+      <label>Measurement</label>
+      <select class="ui dropdown" name="measurements">
+        <option value="weight">Weight</option>
+        <option value="chest">Chest</option>
+        <option value="thigh">Thigh</option>
+        <option value="upperArm">Upper Arm</option>
+        <option value="waist">Waist</option>
+        <option value="hips">Hips</option>
+        <option value="bmi">BMI</option>
+      </select>
+    </div>
+    <div class="field">
+      <label>Target Value</label>
+      <input placeholder="Target" type="text" name="target">
+    </div>
+    <div class="field">
+      <label>Weeks to Achieve</label>
+      <input placeholder="Weeks" type="text" name="date">
+    </div>
+    <div class="field">
+      <label>Comments</label>
+      <input placeholder="Comments" type="text" name="comments">
+    </div>
+  </div>
+  <button class="ui blue submit button">Add Goal</button>
+</form>
+
+<script>
+  $.fn.form.settings.rules.greaterThan = function (inputValue, validationValue) {
+        return inputValue >= validationValue;
+    };
+    $.fn.form.settings.rules.lessThan = function (inputValue, validationValue) {
+        return inputValue <= validationValue;
+    };
+    $('.ui.form')
+        .form({
+            fields: {
+                target: {
+                    identifier: 'target',
+                    rules: [
+                        {
+                            type: 'empty',
+                            prompt: 'Please enter a value'
+                        },
+                        {
+                            type: 'number',
+                            prompt: 'You must enter a Number Value'
+                        },
+                        {
+                            type: 'greaterThan[2]',
+                            prompt: 'must be greater than or equal to 1'
+                        }
+      
+                    ]
+                },
+                date: {
+                    identifier: 'date',
+                    rules: [
+                        {
+                            type: 'empty',
+                            prompt: 'Please enter a value'
+                        },
+                        {
+                            type: 'number',
+                            prompt: 'You must enter a Number Value'
+                        },
+                        {
+                            type: 'greaterThan[2]',
+                            prompt: 'must be greater than or equal to 1'
+                        }
+                       
+                    ]
+                }
+            }
+        })
+    ;
+</script>

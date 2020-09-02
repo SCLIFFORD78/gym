@@ -1,0 +1,65 @@
+{{> menu id="dashboardTrainerMember"}}
+
+<section class="ui segment">
+  <div class="ui raised segment">
+    <div class="ui four column stackable center aligned grid">
+      <div class="middle aligned row">
+        <div class="column">
+          <h4 class="ui icon header">
+            <i class="user icon"></i>
+            <div class="content">{{member.name}}</div>
+          </h4>
+        </div>
+        <div class="column">
+          <h4 class="ui icon header">
+            {{#if isIdealBodyWeight}}
+            <i class="green tachometer alternate icon"></i>
+            {{else}}
+            <i class="red tachometer alternate icon"></i>
+            {{/if}}
+            <div class="content">Ideal Weight Indicator</div>
+          </h4>
+        </div>
+        <div class="column">
+          <h4 class="ui icon header">
+            <i class="heartbeat icon"> {{bmi}}</i>
+            <div class="content">BMI</div>
+          </h4>
+        </div>
+        <div class="column" data-position="bottom center" data-tooltip="Current BMI Category">
+          <h4 class="ui icon header">
+            <i class="user md icon"></i>
+            <div class="content">{{determineBMICategory}}</div>
+          </h4>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="ui raised segment">
+  <a href="/dashboardTrainer">
+    <button class="ui blue submit button">Return to List Of Members</button>
+  </a>
+</section>
+
+<section>
+
+  <div class="ui raised segment">
+    <section class="ui raised segment">
+      <h2 class="ui center aligned header">
+        ASSESSMENTS
+      </h2>
+    </section>
+    {{> listassessmentsTrainerSelect}}
+    <section class="ui raised segment">
+      <h2 class="ui center aligned header">
+        GOALS
+      </h2>
+    </section>
+    {{> listGoalsTrainerSelect}}
+  </div>
+</section>
+<div class="ui raised segment">
+    {{> addGoalTrainer}}
+</div>

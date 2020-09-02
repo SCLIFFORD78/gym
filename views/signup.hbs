@@ -1,0 +1,163 @@
+{{> welcomemenu id="signup"}}
+
+<div class="ui two column grid basic middle aligned segment">
+    <div class="column">
+        <form action="/register" class="ui stacked segment form" method="POST">
+            <h3 class="ui header">Register</h3>
+            <div class="two fields">
+                <div class="field">
+                    <label>Name</label>
+                    <input name="name" placeholder="First Name" type="text">
+                </div>
+                <div class="field">
+                    <label>Gender</label>
+                    <select class="ui dropdown" name="gender">
+                        <option value="Unspecified">Unspecified</option>
+                        <option value="Male">Male</option>
+                        <option value="Female">Female</option>
+                    </select>
+                </div>
+            </div>
+            <div class="field">
+                <input name="email" placeholder="Email" type="text">
+            </div>
+            <div class="field">
+                <label>Password</label>
+                <input name="password" placeholder="Password" type="password">
+            </div>
+            <div class="field">
+                <label>Address</label>
+                <input name="address" placeholder="Address" type="text">
+            </div>
+            <div class="two fields">
+                <div class="field">
+                    <label>Height</label>
+                    <input name="height" placeholder="Height" type="text">
+                </div>
+                <div class="field">
+                    <label>Starting Weight</label>
+                    <input max="250" min="50" name="startWeight" placeholder="Starting Weight" required type="text">
+                </div>
+
+            </div>
+            <div class="grouped fields">
+                <label>Member or Trainer Account</label>
+                <div class="field">
+                    <div class="ui radio checkbox">
+                        <input checked="checked" name="accountType" type="radio" value="Member">
+                        <label>Member</label>
+                    </div>
+                </div>
+                <div class="field">
+                    <div class="ui radio checkbox">
+                        <input name="accountType" type="radio" value="Trainer">
+                        <label>Trainer</label>
+                    </div>
+                </div>
+
+            </div>
+            <button class="ui blue submit button">Submit</button>
+            <div class="ui error message"></div>
+        </form>
+    </div>
+    <div class="column">
+        <img class="ui image" src="/public/images/">
+    </div>
+</div>
+
+<script>
+    $.fn.form.settings.rules.greaterThan = function (inputValue, validationValue) {
+        return inputValue >= validationValue;
+    };
+    $.fn.form.settings.rules.lessThan = function (inputValue, validationValue) {
+        return inputValue <= validationValue;
+    };
+    $('.ui.form')
+        .form({
+            fields: {
+                name: {
+                    identifier: 'name',
+                    rules: [
+                        {
+                            type: 'empty',
+                            prompt: 'Please enter your name'
+                        }
+                    ]
+                },
+                address: {
+                    identifier: 'address',
+                    rules: [
+                        {
+                            type: 'empty',
+                            prompt: 'Please enter your address'
+                        }
+                    ]
+                },
+                email: {
+                    identifier: 'email',
+                    rules: [
+                        {
+                            type: 'email',
+                            prompt: 'Please enter a valid Email'
+                        }
+                    ]
+                },
+                password: {
+                    identifier: 'password',
+                    rules: [
+                        {
+                            type: 'empty',
+                            prompt: 'Please enter a password'
+                        },
+                        {
+                            type: 'minLength[6]',
+                            prompt: 'Your password must be at least {ruleValue} characters'
+                        }
+                    ]
+                },
+                height: {
+                    identifier: 'height',
+                    rules: [
+                        {
+                            type: 'number',
+                            prompt: 'You must enter a Number Value for Height'
+                        },
+                        {
+                            type: 'decimal',
+                            prompt: 'You must enter a decimal Value for Height'
+                        },
+                        {
+                            type: 'greaterThan[1]',
+                            prompt: 'Height must be greater than or equal to 1.0 meters'
+                        },
+                        {
+                            type: 'lessThan[3]',
+                            prompt: 'Height must be less than or equal to 3 meters'
+                        }
+                    ]
+                },
+                startWeight: {
+                    identifier: 'startWeight',
+                    rules: [
+                        {
+                            type: 'number',
+                            prompt: 'You must enter a Number Value for Starting Weight'
+                        },
+                        {
+                            type: 'decimal',
+                            prompt: 'You must enter a decimal Value for Starting Weight'
+                        },
+                        /*{
+                            type: 'lessThan[250]',
+                            prompt: 'Weight must be less than or equal to 250.0Kg'
+                        },
+                        {
+                            type: 'greaterThan[50]',
+                            prompt: 'Weight must be greater than or equal to 50.0Kg'
+                        }*/
+                    ]
+                }
+            }
+        })
+    ;
+</script>
