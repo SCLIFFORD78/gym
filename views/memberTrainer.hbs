@@ -1,0 +1,53 @@
+{{> menuTrainer id="memberTrainer"}}
+
+<section class="ui segment">
+    <h2 class="ui header">
+        {{user.name}}
+    </h2>
+    <div class="ui two column grid basic middle aligned segment">
+        <div class="column">
+            <form action="/members/updateMemberAccount" class="ui stacked segment form" method="POST">
+                <h3 class="ui header">Update Account Details</h3>
+                <div class="two fields">
+                    <div class="field">
+                        <label>{{user.name}}</label>
+                        <input name="name" placeholder="Name" type="text">
+                    </div>
+                    <div class="field">
+                        <label>Gender {{user.gender}}</label>
+                        <select class="ui dropdown" name="gender">
+                          <option value=""></option>
+                            <option value="Unspecified">Unspecified</option>
+                            <option value="Male">Male</option>
+                            <option value="Female">Female</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="field">
+                    <label>Password</label>
+                    <input name="password" placeholder="Password" type="password">
+                </div>
+                <div class="field">
+                    <label>{{user.address}}</label>
+                    <input name="address" placeholder="Address" type="text">
+                </div>
+                <div class="two fields">
+                    <div class="field">
+                        <label>{{user.height}} meters</label>
+                        <input name="height" placeholder="Height between 1 and 3 meters" type="text">
+                    </div>
+                    <div class="field">
+                        <label>{{user.startWeight}} Kg's</label>
+                        <input name="startWeight" placeholder="Starting Weight" type="text">
+                    </div>
+                </div>
+                <button class="ui blue submit button">Submit</button>
+            </form>
+        </div>
+        <div class="column">
+            <img class="ui image" src="images/todo-1.png">
+        </div>
+    </div>
+    </form>
+
+</section>

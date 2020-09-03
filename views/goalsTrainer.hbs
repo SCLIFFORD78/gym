@@ -1,0 +1,45 @@
+{{> menuTrainer id="goalsTrainer"}}
+
+
+<table class="ui table">
+  <thead>
+    <tr>
+        <th>Measurement</th>
+        <th>Target</th>
+        <th>Target Date</th>
+        <th>Comments</th>
+        <th>Status</th>
+        <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    {{#each goals}}
+      <tr>
+        <td>
+            {{measurements}}
+        </td>
+        <td>
+            {{target}}
+        </td>
+        <td>
+            {{targetDate}}
+        </td>
+        <td>
+            {{comments}}
+        </td>
+        <td>
+            {{status}}
+        </td>
+        <td>
+          <a href="/goals/deletGoals/{{id}}" class="ui icon button">
+            <i class="icon trash"></i>
+          </a>
+        </td>
+      </tr>
+    {{/each}}
+  </tbody>
+</table>
+<section class="ui segment">
+  {{> addGoal}}
+</section>
+

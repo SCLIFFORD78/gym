@@ -14,7 +14,7 @@ const goals = {
     if (loggedInUser.goals) {
       for (var i = 0; i < goals.length; i++) {
         if (goals[i]) {
-          utility.checkGoalStatus(loggedInUser.id, goals[i])
+          utility.checkGoalStatus(loggedInUser.id, goals[i]);
           var targetDate = goals[i].date;
           targetDate = utility.timeStampDay(targetDate);
           var assign = { targetDate: targetDate };
@@ -27,7 +27,11 @@ const goals = {
       user: loggedInUser
     };
     logger.info("about to render", userstore.getUserGoals(loggedInUser.id));
-    response.render("goals", viewData);
+    if (request.params.trainer) {
+      response.render("goalsTrainer", viewData);
+    } else {
+      response.render("goals", viewData);
+    }
   },
 
   addGoal(request, response) {

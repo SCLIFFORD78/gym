@@ -1,0 +1,17 @@
+<nav class="ui menu">
+  <header class="ui header item"> <a href="/"> Play Gym Trainer </a></header>
+  <div class="right menu">
+    <a id="dashboardTrainer" class="item" href="/dashboardTrainer"> Members  </a>
+    
+    <a id="goalsTrainer" class="item" href="/goalsTrainer/{{id}}"> My Goals  </a>
+    <a class="item" href="/memberTrainer/{{id}}" id="memberTrainer"> Account </a>
+    <a id="dashboard" class="item" href="/dashboard">Login Member</a>
+    <a class="item" data-position="bottom left" data-tooltip="Logout" href="/logout" id="logout"> <i
+            class="user icon"></i>
+    </a>
+  </div>
+</nav>
+
+<script>
+  $("#{{id}}").addClass("active item");
+</script>
