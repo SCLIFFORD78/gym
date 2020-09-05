@@ -5,8 +5,10 @@
     <tr>
         <th>Measurement</th>
         <th>Target</th>
+        <th>Target Date</th>
         <th>Comments</th>
-        <th></th>
+        <th>Status</th>
+        <th>Delete Goal</th>
     </tr>
     </thead>
 
@@ -19,8 +21,14 @@
           <td>
               {{target}}
           </td>
+           <td>
+            {{targetDate}}
+          </td>
           <td>
               {{comments}}
+          </td>
+          <td>
+              {{status}}
           </td>
           <td>
             <a href="/dashboardTrainerMember/deletGoals/{{id}}" class="ui icon button">

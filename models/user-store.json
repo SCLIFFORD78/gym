@@ -13,7 +13,7 @@
       "assNum": 0
     },
     {
-      "name": "homer Simpson",
+      "name": "Homer Simpson",
       "gender": "Male",
       "email": "homer@simpson.com",
       "password": "secret",
@@ -21,7 +21,17 @@
       "height": "1.8",
       "startWeight": "100",
       "accountType": "Member",
-      "goals": [],
+      "goals": [
+        {
+          "id": "ef7d7820-efc3-11ea-a277-87382b4d17ae",
+          "status": "Open",
+          "setBy": "Homer Simpson",
+          "measurements": "bmi",
+          "date": 1606601140386,
+          "comments": "",
+          "target": "24"
+        }
+      ],
       "id": "8427fdc0-ebdb-11ea-b32b-f7840e795a53"
     }
   ]

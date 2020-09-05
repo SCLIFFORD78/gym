@@ -17,6 +17,10 @@
       <input placeholder="Target" type="text" name="target">
     </div>
     <div class="field">
+      <label>Weeks to Achieve</label>
+      <input placeholder="Weeks" type="text" name="date">
+    </div>
+    <div class="field">
       <label>Comments</label>
       <input placeholder="Comments" type="text" name="comments">
     </div>
@@ -44,10 +48,6 @@
                         {
                             type: 'number',
                             prompt: 'You must enter a Number Value'
-                        },
-                        {
-                            type: 'greaterThan[2]',
-                            prompt: 'must be greater than or equal to 1'
                         }
       
                     ]
@@ -62,10 +62,6 @@
                         {
                             type: 'number',
                             prompt: 'You must enter a Number Value'
-                        },
-                        {
-                            type: 'greaterThan[2]',
-                            prompt: 'must be greater than or equal to 1'
                         }
                        
                     ]

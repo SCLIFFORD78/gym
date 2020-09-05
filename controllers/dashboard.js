@@ -42,9 +42,10 @@ const dashboard = {
 
   addAssessment(request, response) {
     const loggedInUser = accounts.getCurrentUser(request);
-    var weight = request.body.weight
-    if(weight === ''){      //catches a 'NaN' value when converted to float'
-      weight = 0
+    var weight = request.body.weight;
+    if (weight === "") {
+      //catches a 'NaN' value when converted to float'
+      weight = 0;
     }
     const newAssessment = {
       id: uuid.v1(),
@@ -56,7 +57,7 @@ const dashboard = {
       waist: request.body.waist,
       hips: request.body.hips,
       comments: request.body.comments,
-      date: Date.now() ,
+      date: Date.now(),
       trend: ""
     };
     logger.debug("Creating a new Assessment", newAssessment);

@@ -11,8 +11,22 @@
       "hips": "36",
       "comments": "",
       "date": 1599088810403,
-      "trend": false,
+      "trend": true,
       "time": "02/Sep/2020 23:20:10"
+    },
+    {
+      "id": "4d76e6b0-efd2-11ea-a958-dd5ea3707123",
+      "userid": "8427fdc0-ebdb-11ea-b32b-f7840e795a53",
+      "weight": 95,
+      "chest": "43",
+      "thigh": "17",
+      "upperArm": "10",
+      "waist": "34",
+      "hips": "35",
+      "comments": "",
+      "date": 1599349711003,
+      "trend": true,
+      "time": "05/Sep/2020 23:48:31"
     }
   ]
 }

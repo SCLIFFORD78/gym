@@ -179,16 +179,29 @@ const utility = {
     var targetMeasurement;
     var targetMeasurementValue;
     var prop, currentValue;
-    if (assessments && (goals.status != "Missed" || goals.status != "Achieved")) {
+    if (
+      assessments &&
+      (goals.status != "Missed" || goals.status != "Achieved")
+    ) {
       for (prop in assessments) {
         if (prop === goals.measurements) {
           targetMeasurement = goals.measurements;
           //goals.date = Date.now() - 5000; //For testing purposes TEST
           currentValue = assessments[targetMeasurement];
-          logger.info(currentValue)//TEST
-          if (currentValue < goals.target && Date.now() < goals.date) {
+          if (
+            (currentValue <= goals.target &&
+              Date.now() < goals.date &&
+              goals.initialValue > goals.target) ||
+            (currentValue >= goals.target &&
+              Date.now() < goals.date &&
+              goals.initialValue < goals.target)
+          ) {
             goals.status = "Achieved";
-            goals.comments = 'Achieved on ' + this.timeStampDay(Date.now())
+            goals.comments =
+              "Actual Value: " +
+              currentValue +
+              ". Achieved on " +
+              this.timeStampDay(Date.now());
           } else if (Date.now() > goals.date) {
             goals.status = "Missed";
           }

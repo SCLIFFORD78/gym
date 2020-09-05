@@ -5,6 +5,7 @@ const utility = require("../utils/utility");
 const userstore = require("../models/user-store");
 const uuid = require("uuid");
 const accounts = require("./accounts.js");
+const assessmentStore = require("../models/assessment-store");
 
 const goals = {
   index(request, response) {
@@ -36,7 +37,16 @@ const goals = {
 
   addGoal(request, response) {
     const loggedInUser = accounts.getCurrentUser(request);
-    logger.info(loggedInUser);
+    var assessments = assessmentStore.getUserAssessment(loggedInUser.id);
+    var prop, initialValue;
+    if (assessments) {
+      var latestAssessment = assessments[assessments.length - 1];
+      for (prop in latestAssessment) {
+        if (prop === request.body.measurements) {
+          initialValue = latestAssessment[prop];
+        }
+      }
+    }
     const newGoal = {
       id: uuid.v1(),
       status: "Open",
@@ -44,7 +54,8 @@ const goals = {
       measurements: request.body.measurements,
       date: Date.now() + 604800000 * Number(request.body.date),
       comments: request.body.comments,
-      target: request.body.target
+      target: request.body.target,
+      initialValue: initialValue
     };
     logger.debug("Creating a new Goal", newGoal);
     userstore.addGoal(loggedInUser.id, newGoal);

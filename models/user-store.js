@@ -2,7 +2,7 @@
 
 const _ = require("lodash");
 const JsonStore = require("./json-store");
-const logger = require("../utils/logger");//TEST
+const logger = require("../utils/logger"); //TEST
 
 const userStore = {
   store: new JsonStore("./models/user-store.json", { users: [] }),
@@ -39,7 +39,7 @@ const userStore = {
 
   addGoal(id, goal) {
     const user = this.getUserById(id);
-    logger.info(goal)//TEST
+    logger.info(goal); //TEST
     user.goals.push(goal);
     this.store.save();
   },

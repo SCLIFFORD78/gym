@@ -33,7 +33,7 @@ const accounts = {
 
   register(request, response) {
     const user = request.body;
-    user.goals = []
+    user.goals = [];
     const members = userstore.getAllUsers();
     var existingMember = false;
     for (var i = 0; i < members.length; i++) {
