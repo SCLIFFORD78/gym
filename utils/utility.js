@@ -179,10 +179,7 @@ const utility = {
     var targetMeasurement;
     var targetMeasurementValue;
     var prop, currentValue;
-    if (
-      assessments &&
-      (goals.status != "Missed" || goals.status != "Achieved")
-    ) {
+    if (assessments && goals.status == "Open") {
       for (prop in assessments) {
         if (prop === goals.measurements) {
           targetMeasurement = goals.measurements;
@@ -209,11 +206,38 @@ const utility = {
       }
     } else {
       //goals.date = Date.now() - 5000; //For testing purposes TEST
-      if (Date.now() > goals.date) {
+      if (Date.now() > goals.date && goals.status == "Open") {
         goals.status = "Missed";
         goals.comments = "Assessment not entered in Time";
       }
     }
+    return goals;
+  },
+
+  goalSummary(goals) {
+    var goalSummary = [];
+    var open = 0,
+      achieved = 0,
+      total = 0,
+      missed = 0;
+    if (goals) {
+      for (var i = 0; i < goals.length; i++) {
+        if (goals[i].status == "Open") {
+          open += 1;
+        } else if (goals[i].status == "Missed") {
+          missed += 1;
+        } else if (goals[i].status == "Achieved") {
+          achieved += 1;
+        }
+        total = goals.length;
+      }
+    }
+    goalSummary.total = total;
+    goalSummary.open = open;
+    goalSummary.missed = missed;
+    goalSummary.achieved = achieved;
+
+    return goalSummary;
   }
 };
 

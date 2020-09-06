@@ -10,7 +10,7 @@
       "startWeight": "100",
       "accountType": "Trainer",
       "id": "85f978d0-d6e7-11ea-ac07-01469c23bc2c",
-      "assNum": 0
+      "assNum": 1
     },
     {
       "name": "Homer Simpson",
@@ -23,16 +23,41 @@
       "accountType": "Member",
       "goals": [
         {
-          "id": "ef7d7820-efc3-11ea-a277-87382b4d17ae",
+          "id": "3f4c4bb0-efe7-11ea-b683-dfb70e6070fc",
+          "status": "Missed",
+          "setBy": "Homer Simpson",
+          "measurements": "weight",
+          "date": 1599358766668,
+          "comments": "",
+          "target": "110",
+          "initialValue": 100,
+          "targetDate": "06/Sep/2020"
+        },
+        {
+          "id": "b862fbc0-efe7-11ea-8a18-ddc8a15c0ad1",
+          "status": "Missed",
+          "setBy": "Homer Simpson",
+          "measurements": "weight",
+          "date": 1599358969821,
+          "comments": "",
+          "target": "120",
+          "initialValue": 110,
+          "targetDate": "06/Sep/2020"
+        },
+        {
+          "id": "ccfa36f0-efe9-11ea-95ae-e51a1214becd",
           "status": "Open",
           "setBy": "Homer Simpson",
-          "measurements": "bmi",
-          "date": 1606601140386,
+          "measurements": "weight",
+          "date": 1599359863359,
           "comments": "",
-          "target": "24"
+          "target": "100",
+          "initialValue": 90
         }
       ],
-      "id": "8427fdc0-ebdb-11ea-b32b-f7840e795a53"
+      "id": "8427fdc0-ebdb-11ea-b32b-f7840e795a53",
+      "goalsNum": 2,
+      "assNum": 4
     }
   ]
 }

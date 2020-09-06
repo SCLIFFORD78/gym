@@ -12,6 +12,7 @@ const goals = {
     logger.info("dashboard with goals rendering");
     const loggedInUser = accounts.getCurrentUser(request);
     var goals = userstore.getUserGoals(loggedInUser.id);
+    var goalSummary;
     if (loggedInUser.goals) {
       for (var i = 0; i < goals.length; i++) {
         if (goals[i]) {
@@ -23,9 +24,11 @@ const goals = {
         }
       }
     }
+    goalSummary = utility.goalSummary(goals);
     const viewData = {
       goals: goals,
-      user: loggedInUser
+      user: loggedInUser,
+      goalSummary: goalSummary
     };
     logger.info("about to render", userstore.getUserGoals(loggedInUser.id));
     if (request.params.trainer) {

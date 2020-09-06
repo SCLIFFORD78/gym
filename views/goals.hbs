@@ -1,5 +1,38 @@
 {{> menu id="goals"}}
 
+<section class="ui segment">
+  <div class="ui raised segment">
+    <div class="ui four column stackable center aligned grid">
+      <div class="middle aligned row">
+        <div class="column">
+          <h4 class="ui icon header">
+            <i class="user icon"></i>
+            <div class="content">Total Goals  {{goalSummary.total}}</div>
+          </h4>
+        </div>
+        <div class="column">
+          <h4 class="ui icon header">
+            <i class="green tachometer alternate icon"></i>
+            <div class="content">Goals Achieved  {{goalSummary.achieved}}</div>
+          </h4>
+        </div>
+        <div class="column">
+          <h4 class="ui icon header">
+            <i class="red tachometer alternate icon"></i>
+            <div class="content">Goals Missed  {{goalSummary.missed}}</div>
+          </h4>
+        </div>
+        <div class="column">
+          <h4 class="ui icon header">
+            <i class="blue tachometer alternate icon"></i>
+            <div class="content">Goals Open  {{goalSummary.open}}</div>
+          </h4>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="ui segment">
 
 <table class="ui table">
   <thead>
