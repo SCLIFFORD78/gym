@@ -211,6 +211,7 @@ const utility = {
         goals.comments = "Assessment not entered in Time";
       }
     }
+	userstore.store.save();
     return goals;
   },
 
@@ -236,7 +237,7 @@ const utility = {
     goalSummary.open = open;
     goalSummary.missed = missed;
     goalSummary.achieved = achieved;
-
+	userstore.store.save();
     return goalSummary;
   }
 };
