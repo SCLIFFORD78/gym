@@ -24,35 +24,36 @@
       "goals": [
         {
           "id": "3f4c4bb0-efe7-11ea-b683-dfb70e6070fc",
-          "status": "Missed",
+          "status": "Open",
           "setBy": "Homer Simpson",
           "measurements": "weight",
-          "date": 1599358766668,
+          "date": 1601976048000,
           "comments": "",
-          "target": "110",
+          "target": "80",
           "initialValue": 100,
-          "targetDate": "06/Sep/2020"
+          "targetDate": "06/Oct/2020"
         },
         {
           "id": "b862fbc0-efe7-11ea-8a18-ddc8a15c0ad1",
-          "status": "Missed",
+          "status": "Open",
           "setBy": "Homer Simpson",
-          "measurements": "weight",
-          "date": 1599358969821,
+          "measurements": "thigh",
+          "date": 1601976048000,
           "comments": "",
-          "target": "120",
-          "initialValue": 110,
-          "targetDate": "06/Sep/2020"
+          "target": "15",
+          "initialValue": 18,
+          "targetDate": "06/Oct/2020"
         },
         {
           "id": "ccfa36f0-efe9-11ea-95ae-e51a1214becd",
           "status": "Open",
           "setBy": "Homer Simpson",
-          "measurements": "weight",
-          "date": 1599359863359,
+          "measurements": "waist",
+          "date": 1601976048000,
           "comments": "",
-          "target": "100",
-          "initialValue": 90
+          "target": "32",
+          "initialValue": 34
+		  "targetDate": "06/Oct/2020"
         }
       ],
       "id": "8427fdc0-ebdb-11ea-b32b-f7840e795a53",
