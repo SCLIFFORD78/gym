@@ -39,7 +39,7 @@ const userStore = {
 
   addGoal(id, goal) {
     const user = this.getUserById(id);
-    logger.info(goal); //TEST
+    logger.info(id); //TEST
     user.goals.push(goal);
     this.store.save();
   },

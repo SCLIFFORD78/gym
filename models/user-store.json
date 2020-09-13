@@ -10,54 +10,83 @@
       "startWeight": "100",
       "accountType": "Trainer",
       "id": "85f978d0-d6e7-11ea-ac07-01469c23bc2c",
-      "assNum": 1
+      "assNum": 1,
+      "goals": [
+        {
+          "id": "dc08bc40-f609-11ea-a22e-1946e717ef51",
+          "status": "Open",
+          "setBy": "james",
+          "measurements": "weight",
+          "date": 1607290879492,
+          "comments": "",
+          "target": "55",
+          "initialValue": 102,
+          "targetDate": "06/Dec/2020"
+        }
+      ],
+      "goalsNum": 1
     },
     {
       "name": "Homer Simpson",
       "gender": "Male",
       "email": "homer@simpson.com",
-      "password": "secret",
+      "password": "HAPPY",
       "address": "Killarney, Co. Kerry , Ireland",
       "height": "1.8",
       "startWeight": "100",
       "accountType": "Member",
       "goals": [
         {
-          "id": "3f4c4bb0-efe7-11ea-b683-dfb70e6070fc",
-          "status": "Missed",
-          "setBy": "Homer Simpson",
-          "measurements": "weight",
-          "date": 1599358766668,
-          "comments": "",
-          "target": "110",
-          "initialValue": 100,
-          "targetDate": "06/Sep/2020"
-        },
-        {
-          "id": "b862fbc0-efe7-11ea-8a18-ddc8a15c0ad1",
-          "status": "Missed",
-          "setBy": "Homer Simpson",
-          "measurements": "weight",
-          "date": 1599358969821,
-          "comments": "",
-          "target": "120",
-          "initialValue": 110,
-          "targetDate": "06/Sep/2020"
-        },
-        {
           "id": "ccfa36f0-efe9-11ea-95ae-e51a1214becd",
-          "status": "Open",
+          "status": "Missed",
           "setBy": "Homer Simpson",
           "measurements": "weight",
           "date": 1599359863359,
-          "comments": "",
+          "comments": "try even harder",
           "target": "100",
-          "initialValue": 90
+          "initialValue": 90,
+          "targetDate": "06/Sep/2020"
+        },
+        {
+          "id": "f1886a60-f605-11ea-8bc0-55c89f216e33",
+          "status": "Achieved",
+          "setBy": "Homer Simpson",
+          "measurements": "weight",
+          "date": 1600636397574,
+          "comments": "Actual Value: 74. Achieved on 13/Sep/2020",
+          "target": "74",
+          "initialValue": 75,
+          "targetDate": "20/Sep/2020"
+        },
+        {
+          "id": "121c2910-f60b-11ea-a22e-1946e717ef51",
+          "status": "Open",
+          "setBy": "Homer Simpson",
+          "measurements": "weight",
+          "date": 1601848199713,
+          "comments": "",
+          "target": "95",
+          "initialValue": 75,
+          "targetDate": "04/Oct/2020"
         }
       ],
       "id": "8427fdc0-ebdb-11ea-b32b-f7840e795a53",
       "goalsNum": 2,
-      "assNum": 4
+      "assNum": 10
+    },
+    {
+      "name": "Sheamus Clifford",
+      "gender": "Male",
+      "email": "faugh01@gmail.com",
+      "password": "happy1",
+      "address": "Killarney, Co. Kerry , Ireland",
+      "height": "1.8",
+      "startWeight": "100",
+      "accountType": "Member",
+      "goals": [],
+      "id": "adac5680-f60a-11ea-a22e-1946e717ef51",
+      "goalsNum": 0,
+      "assNum": 0
     }
   ]
 }

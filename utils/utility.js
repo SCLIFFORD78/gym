@@ -8,7 +8,7 @@ const userstore = require("../models/user-store");
 const utility = {
   calculateBMI(startingWeight, height, assessment) {
     var bmi;
-    if (assessment === 0) {
+    if (!assessment) {
       bmi = startingWeight / height / height;
     } else {
       if (assessment.weight != 0) {
